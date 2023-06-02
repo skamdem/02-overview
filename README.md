@@ -1,10 +1,9 @@
 # Terraform overview and setup 
 
-Instructions include basic "hello world" terraform config to provision a single AWS EC2 instance.
-
-This project originates from https://github.com/sidpalas/devops-directive-terraform-course
-
-We shall be running the following commands:
+> Instructions for basic terraform config to provision a single AWS EC2 instance.
+>
+> This project originates from [here](https://github.com/sidpalas/devops-directive-terraform-course "devops directive terraform course")
+## List of commands:
 
 ```
 $ terraform init
@@ -12,13 +11,17 @@ $ terraform validate
 $ terraform fmt
 $ terraform plan
 $ terraform apply
+$ terraform init -upgrade // after updating "required_providers"
+$ terraform destroy // cleanup on project completion
 ```
-Note: Run this if you update "required_providers"
-```
-terraform init -upgrade
-```
+***
+## Files configuration : 
 
-for delete:
-```
-$ terraform destroy
-```
+| Fine name | Contents |
+| ------------ | ------------- |
+| aws_resources.tf | resources |
+| main.tf | terraform setup |
+| outputs.tf | outputs |
+| providers.tf | list of providers |
+| terraform.tfvars | actual values of variable |
+| variables.tf | variables definition |
